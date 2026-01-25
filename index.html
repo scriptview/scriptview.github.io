@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScriptView - Fountain Screenplay Reader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #FDFCF5;
+            --primary-fg: #1A2B3C;
+            --primary-accent: #C5A059;
+            --secondary-bg: #EAE6DA;
+            --divider: #D4CFC3;
+            --text-secondary: rgba(26, 43, 60, 0.7);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-fg);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            border-radius: 24px;
+            margin: 0 auto 24px;
+            box-shadow: 0 4px 12px rgba(26, 43, 60, 0.15);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary-fg);
+        }
+
+        .tagline {
+            max-width: 500px;
+            margin: 0 auto 32px;
+        }
+
+        .tagline-item {
+            display: block;
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .tagline-item:last-child {
+            border-bottom: none;
+        }
+
+        .tagline-item strong {
+            color: var(--primary-fg);
+        }
+
+        .app-store-badge {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-fg);
+            color: var(--primary-bg);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .app-store-badge:hover {
+            opacity: 0.9;
+        }
+
+        section {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--primary-fg);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .features {
+            display: grid;
+            gap: 24px;
+        }
+
+        .feature {
+            padding: 24px;
+            background-color: var(--secondary-bg);
+            border-radius: 12px;
+        }
+
+        .feature h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-fg);
+        }
+
+        .feature p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .screenplay-sample {
+            background-color: var(--primary-bg);
+            border: 1px solid var(--divider);
+            border-radius: 12px;
+            padding: 32px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            margin: 24px 0;
+        }
+
+        .scene-heading {
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .character {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+
+        .dialogue {
+            text-align: center;
+            max-width: 60%;
+            margin: 0 auto 16px;
+        }
+
+        .action {
+            margin-bottom: 16px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--primary-fg);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            margin: 0 16px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            .dialogue {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="app_icon.jpg" alt="ScriptView App Icon" class="app-icon">
+        <h1>ScriptView</h1>
+        <div class="tagline">
+            <span class="tagline-item"><strong>Fountain format</strong> screenplay reader for iPhone</span>
+            <span class="tagline-item"><strong>Private</strong> — no data collected, no account needed</span>
+            <span class="tagline-item"><strong>Easy import</strong> — from Mac via AirDrop or iCloud</span>
+        </div>
+        <a href="#" class="app-store-badge">Download on the App Store</a>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>About ScriptView</h2>
+            <p>ScriptView is a simple, elegant app for reading screenplays written in the Fountain format. Whether you're a screenwriter reviewing your work, an actor studying a script, or a film enthusiast exploring classic screenplays, ScriptView provides a distraction-free reading experience.</p>
+            <p>The app features a warm, paper-like aesthetic designed to reduce eye strain during extended reading sessions, with proper screenplay formatting that respects the craft of screenwriting.</p>
+        </section>
+
+        <section>
+            <h2>How It Looks</h2>
+            <div class="screenplay-sample">
+                <div class="scene-heading">INT. COFFEE SHOP - DAY</div>
+                <div class="action">A quiet morning. Sunlight streams through the windows. SARAH, 30s, sits alone at a corner table, lost in thought.</div>
+                <div class="character">SARAH</div>
+                <div class="dialogue">Sometimes the best stories are the ones we never tell.</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>Fountain Format Support</h3>
+                    <p>Full support for the Fountain screenplay format, including scene headings, dialogue, action, transitions, and more.</p>
+                </div>
+                <div class="feature">
+                    <h3>Reading Progress</h3>
+                    <p>Automatically saves your reading position so you can pick up right where you left off.</p>
+                </div>
+                <div class="feature">
+                    <h3>Import Scripts</h3>
+                    <p>Easily import .fountain files from the Files app or other apps using the standard iOS share sheet.</p>
+                </div>
+                <div class="feature">
+                    <h3>Offline Reading</h3>
+                    <p>All your scripts are stored locally on your device. No internet connection required, no account needed.</p>
+                </div>
+                <div class="feature">
+                    <h3>Eye-Friendly Design</h3>
+                    <p>Warm, cream-colored background inspired by traditional screenplay paper to reduce eye strain.</p>
+                </div>
+                <div class="feature">
+                    <h3>Completely Free</h3>
+                    <p>No ads, no in-app purchases, no subscriptions. Just a clean reading experience.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>What is Fountain?</h2>
+            <p>Fountain is a simple, plain-text markup language for writing screenplays. It allows writers to focus on their story without worrying about complex formatting software. ScriptView faithfully renders Fountain files with proper screenplay formatting.</p>
+            <p>Learn more about the Fountain format at <a href="https://fountain.io" target="_blank" rel="noopener">fountain.io</a>.</p>
+        </section>
+
+        <section>
+            <h2>Built with Flutter</h2>
+            <p>ScriptView is built using <a href="https://flutter.dev" target="_blank" rel="noopener">Flutter</a>, Google's open-source UI framework. While Flutter is developed by Google, ScriptView does not use any Google services, analytics, or data collection. The framework is used purely for building the user interface.</p>
+            <p>Flutter itself does not collect any user data. See <a href="https://flutter.dev/brand" target="_blank" rel="noopener">Flutter's policies</a> for more information about the framework.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+        <p>&copy; 2026 Pierre Carion. All rights reserved.</p>
+        <p>Contact: <a href="mailto:pcarion@gmail.com">pcarion@gmail.com</a></p>
+    </footer>
+</body>
+</html>
