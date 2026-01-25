@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - ScriptView</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-bg: #FDFCF5;
+            --primary-fg: #1A2B3C;
+            --primary-accent: #C5A059;
+            --secondary-bg: #EAE6DA;
+            --divider: #D4CFC3;
+            --text-secondary: rgba(26, 43, 60, 0.7);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--primary-bg);
+            color: var(--primary-fg);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 24px;
+            color: var(--primary-fg);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary-fg);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: 32px 0;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: var(--primary-fg);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-box {
+            background-color: var(--secondary-bg);
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            margin: 24px 0;
+        }
+
+        .contact-box p {
+            margin-bottom: 16px;
+            color: var(--primary-fg);
+            font-size: 1.1rem;
+        }
+
+        .email-link {
+            display: inline-block;
+            padding: 14px 28px;
+            background-color: var(--primary-fg);
+            color: var(--primary-bg);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+
+        .email-link:hover {
+            opacity: 0.9;
+        }
+
+        ul {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: var(--primary-fg);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 24px 16px;
+            }
+
+            h1 {
+                font-size: 1.75rem;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-link">&larr; Back to ScriptView</a>
+        <h1>Support</h1>
+        <p class="subtitle">We're here to help</p>
+    </header>
+
+    <div class="container">
+        <div class="contact-box">
+            <p>For questions, feedback, or issues, please contact us by email:</p>
+            <a href="mailto:pcarion@gmail.com" class="email-link">pcarion@gmail.com</a>
+        </div>
+
+        <section>
+            <h2>Before You Write</h2>
+            <p>Here are some common topics that might help:</p>
+            <ul>
+                <li><strong>Importing scripts:</strong> Use AirDrop, iCloud Drive, or the Files app to import .fountain files. You can also use "Open in ScriptView" from any app that shares files.</li>
+                <li><strong>Reading progress:</strong> Your position is saved automatically when you leave a script. Just tap on the script again to continue where you left off.</li>
+                <li><strong>File format:</strong> ScriptView only supports the Fountain format (.fountain files). Learn more at <a href="https://fountain.io" target="_blank" rel="noopener">fountain.io</a>.</li>
+                <li><strong>Deleting scripts:</strong> Use the Files app to manage scripts stored in ScriptView's documents folder.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>When Contacting Support</h2>
+            <p>To help us assist you quickly, please include:</p>
+            <ul>
+                <li>Your device model (e.g., iPhone 15)</li>
+                <li>iOS version (found in Settings > General > About)</li>
+                <li>A description of the issue or question</li>
+                <li>Steps to reproduce the problem, if applicable</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Response Time</h2>
+            <p>ScriptView is developed and maintained by a single developer. I do my best to respond to all inquiries within a few days. Thank you for your patience.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Pierre Carion. All rights reserved.</p>
+        <p><a href="index.html">ScriptView</a> &middot; <a href="privacy.html">Privacy Policy</a> &middot; <a href="terms.html">Terms & Conditions</a></p>
+    </footer>
+</body>
+</html>
